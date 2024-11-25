@@ -1,13 +1,19 @@
 {
   "version": 2,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist",
+        "buildCommand": "chmod +x build.sh && ./build.sh"
+      }
     }
   ],
-  "buildCommand": "npm install && npm run build",
-  "installCommand": "npm install",
-  "framework": "vite",
-  "outputDirectory": "dist"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
