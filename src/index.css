@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary text-lightText;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply cursor-pointer hover:text-secondary transition-colors duration-300;
+  }
+  
+  .btn {
+    @apply px-6 py-3 border border-secondary text-secondary rounded hover:bg-secondary/10 transition-all duration-300;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-lightText;
+  }
+}
