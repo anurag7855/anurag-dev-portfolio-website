@@ -1,5 +1,9 @@
 {
   "version": 2,
+  "buildCommand": "npm install && npm run build",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "outputDirectory": "dist",
   "routes": [
     { "handle": "filesystem" },
     {
